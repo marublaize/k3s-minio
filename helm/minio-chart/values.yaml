@@ -1,0 +1,20 @@
+minio:
+  image:
+    repository: minio/minio         # Custom Minio Docker image repository
+    tag: latest                     # Custom Minio Docker image tag
+  accessKey: your-access-key        # Custom Minio access key
+  secretKey: your-secret-key        # Custom Minio secret key
+  serviceType: LoadBalancer         # Service type (LoadBalancer, NodePort, ClusterIP)
+
+persistence:
+  enabled: true                     # Enable persistent storage
+  storageClass: default             # Storage class for PersistentVolumeClaim
+  size: 10Gi                         # Size of the PersistentVolumeClaim
+
+resources:
+  limits:
+    cpu: 500m                        # CPU resource limits
+    memory: 512Mi                    # Memory resource limits
+  requests:
+    cpu: 100m                        # CPU resource requests
+    memory: 256Mi                    # Memory resource requests
