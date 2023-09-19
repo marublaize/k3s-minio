@@ -34,8 +34,10 @@ helm upgrade --install minio ./minio-chart
 
 You need to set at least the following configs inside ```values.yaml```:
 
+```yaml
 Access Key: your-access-key
 Secret Key: your-secret-key
+```
 
 ## Exposing Minio
 
