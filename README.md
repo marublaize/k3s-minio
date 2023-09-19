@@ -22,9 +22,9 @@ k3s-minio-deployment/
 ├── setup_k3s.sh                        # K3s installation script
 ```
 
-## Deploy Minio using Helm (optional)
+## Deploy Minio using Helm
 
-If you prefer Helm, deploy Minio using Helm charts:
+Deploy Minio using the Helm chart:
 
 ```bash
 helm upgrade --install minio ./minio-chart
@@ -32,12 +32,14 @@ helm upgrade --install minio ./minio-chart
 
 ## Minio Configuration
 
+You need to set at least the following configs inside ```values.yaml```:
+
 Access Key: your-access-key
 Secret Key: your-secret-key
 
 ## Exposing Minio
 
-By default, the service was configure to be exposed as a LoadBalancer. Access Minio through the LoadBalancer's IP address. You can change this behavior through ```values.yaml``` file.
+By default, the service was configure to be exposed as a ```LoadBalancer```. You can change this behavior through ```values.yaml``` file.
 
 ## High-Availability Options
 
