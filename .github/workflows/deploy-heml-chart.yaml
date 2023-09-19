@@ -28,7 +28,7 @@ jobs:
         run: |
           helm upgrade --install minio ./minio-chart \
             --namespace minio \
+            --create-namespace \
             --values ./minio-chart/values.yaml \
             --set minio.accessKey=${{ secrets.MINIO_ACCESS_KEY }} \
             --set minio.secretKey=${{ secrets.MINIO_SECRET_KEY }}
-
